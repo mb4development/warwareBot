@@ -19,7 +19,7 @@ apikey = os.getenv("API_KEY")
 @client.event
 async def on_ready():
     await client.tree.sync()
-    print(f"Ready as {client.user}")
+    print(f"Ready as {client.user}!")
 
 @discord.app_commands.allowed_installs(guilds=True, users=True)
 @discord.app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
