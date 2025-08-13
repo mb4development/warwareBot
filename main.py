@@ -53,7 +53,7 @@ async def ownerships(interaction: discord.Interaction, user: discord.User):
                     link = f"https://www.warware.org/store/{ownership['product']['id']}"
                     products.append(f"[{title}]({link})")
 
-                description = "\n".join(products)
+                description = "\n".join(products) if products else "No products found."
 
         embed = discord.Embed(
             title= f"Products owned by {user.display_name}({user.name})" if user.name != user.display_name else f"Products owned by {user.name}",
